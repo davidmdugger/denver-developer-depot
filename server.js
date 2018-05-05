@@ -19,7 +19,7 @@ mongoose.connect(db)
 // use the routes imported
 app.use('/api/users', users);
 app.use('/api/profile', profile);
-app.use('api/posts', posts);
+app.use('/api/posts', posts);
 
 app.get('/', (req, res) => res.send('Hello'));
 
