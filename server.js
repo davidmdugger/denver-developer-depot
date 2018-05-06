@@ -1,7 +1,8 @@
 const express = require('express'),
       app = express(),
       mongoose = require('mongoose'),
-      bodyParser = require('body-parser');
+      bodyParser = require('body-parser'),
+      passport = require('passport');
 
 const port = process.env.PORT || 3000;
 
@@ -26,6 +27,9 @@ app.use('/api/users', users);
 app.use('/api/profile', profile);
 app.use('/api/posts', posts);
 
-app.get('/', (req, res) => res.send('Hello'));
+// Passport middleware
+app.use(passport.initialize());
 
+// Passport Config
+require('./config/passport')(passport);
 app.listen(port, () => console.log(`Server is running on port ${port}`));
