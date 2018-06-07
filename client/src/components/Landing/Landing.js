@@ -1,5 +1,5 @@
-import React from 'react';
-import './Landing.css';
+import React from "react";
+import "./Landing.css";
 
 export default () => {
   return (
@@ -9,5 +9,5 @@ export default () => {
         <h5>Meetup, learn, talk tech with fellow devs in the Mile High City</h5>
       </div>
     </div>
-  )
-}
+  );
+};

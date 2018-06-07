@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Register extends Component {
   render() {
@@ -6,7 +6,7 @@ class Register extends Component {
       <div>
         <h1>Register</h1>
       </div>
-    )
+    );
   }
 }
 

@@ -1,5 +1,5 @@
-header{
-  background-color: #CCECFB;
+header {
+  background-color: #ccecfb;
   height: 55px;
   color: #343434;
   display: flex;
@@ -7,18 +7,18 @@ header{
   justify-content: space-between;
 }
 
-header #logo{
+header #logo {
   height: 75%;
   padding-left: 20px;
 }
 
-#nav-container{
+#nav-container {
   display: flex;
   padding-right: 20px;
   height: 55px;
 }
 
-#nav-container a{
+#nav-container a {
   padding: 8px;
   color: #343434;
   display: flex;
@@ -26,11 +26,11 @@ header #logo{
   transition: linear 200ms;
 }
 
-#nav-container a:hover{
+#nav-container a:hover {
   background-color: #343434;
-  color: #CCECFB;
+  color: #ccecfb;
 }
 
-#nav-container li{
+#nav-container li {
   list-style: none;
 }
