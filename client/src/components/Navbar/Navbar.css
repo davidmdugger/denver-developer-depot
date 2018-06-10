@@ -1,7 +1,7 @@
 header {
   background-color: #ccecfb;
   height: 55px;
-  color: #343434;
+  color: #003255;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -20,15 +20,15 @@ header #logo {
 
 #nav-container a {
   padding: 8px;
-  color: #343434;
+  color: #003255;
   display: flex;
   align-items: center;
   transition: linear 200ms;
 }
 
 #nav-container a:hover {
-  background-color: #343434;
-  color: #ccecfb;
+  background-color: #FFE000;
+  color: #003255;
 }
 
 #nav-container li {

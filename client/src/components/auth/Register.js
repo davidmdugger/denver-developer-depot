@@ -1,11 +1,98 @@
 import React, { Component } from "react";
+import "./Form.css";
+
+import axios from "axios";
 
 class Register extends Component {
+  state = {
+    name: "",
+    email: "",
+    password: "",
+    password2: "",
+    errors: {}
+  };
+
+  onChange = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  };
+
+  onSubmit = e => {
+    e.preventDefault();
+
+    this.createNewUser();
+  };
+
+  createNewUser = () => {
+    const newUser = {
+      name: this.state.name,
+      email: this.state.email,
+      password: this.state.password,
+      password2: this.state.password2
+    };
+
+    axios
+      .post("/api/users/register", newUser)
+      .then(res => console.log(res.data))
+      .catch(err => this.setState({ errors: err.response.data }));
+  }
+
   render() {
+    const { errors } = this.state;
     return (
-      <div>
-        <h1>Register</h1>
-      </div>
+      <form onSubmit={this.onSubmit}>
+        <div className="form-title">
+          <h1>Sign Up</h1>
+          <h4>Create your account</h4>
+        </div>
+
+        <input
+          className={errors.name ? 'invalid' : null}
+          type="text"
+          name="name"
+          placeholder="John Doe"
+          value={this.state.name}
+          onChange={this.onChange}
+        />
+        {errors.name && (<div><small className="invalid-desc">{errors.name}</small></div>)}
+
+        <input
+          className={errors.email ? 'invalid' : null}
+          type="email"
+          name="email"
+          placeholder="your@email.com"
+          value={this.state.email}
+          onChange={this.onChange}
+        />
+        {errors.email && (<div><small className="invalid-desc">{errors.email}</small></div>)}
+
+        <small>
+          This site uses gravatar. If you want an avatar, use an email with your
+          image
+        </small>
+        <input
+          className={errors.password ? 'invalid' : null}
+          type="password"
+          name="password"
+          placeholder="password"
+          value={this.state.password}
+          onChange={this.onChange}
+        />
+        {errors.password && (<div><small className="invalid-desc">{errors.password}</small></div>)}
+
+        <input
+          className={errors.password2 ? 'invalid' : null}
+          type="password"
+          name="password2"
+          placeholder="confirm password"
+          value={this.state.password2}
+          onChange={this.onChange}
+        />
+        {errors.password2 && (<div><small className="invalid-desc">{errors.password2}</small></div>)}
+
+        <input type="submit" className="btn" value="Sign Me Up!" />
+      </form>
     );
   }
 }

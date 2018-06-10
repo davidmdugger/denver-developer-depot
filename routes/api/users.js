@@ -16,7 +16,7 @@ const validateLoginInput = require("../../validation/login");
 // @access  Public
 router.get("/test", (req, res) => res.json({ msg: "Dope, user API works" }));
 
-// @route   GET api/users/register
+// @route   POST api/users/register
 // @desc    Register a new user
 // @access  Public
 router.post("/register", (req, res) => {

@@ -4,7 +4,7 @@ const express = require("express"),
   bodyParser = require("body-parser"),
   passport = require("passport");
 
-const port = process.env.PORT || 8000;
+const port = 8000;
 
 const users = require("./routes/api/users"),
   profile = require("./routes/api/profile"),
