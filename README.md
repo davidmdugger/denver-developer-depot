@@ -6,6 +6,8 @@ This code base uses the prettier extension for uniform code.
 
 # Backend Dependencies
 
+The server runs on port 8000.
+
 This project uses Babel to transpile ES6 to ES5.
 
 Express.js is used as the backend framework.
@@ -21,3 +23,19 @@ Passport-jwt is used to protect the backend routes.
 bcryptjs is used for password encryption and decryption.
 
 Validator is used for server side validation
+
+# Client Dependencies
+The client runs on port 3000.
+
+This project uses React for frontent rendering.
+
+Redux is used to manage state.
+
+# Get it running
+Feel free to clone the project.
+
+Concurrently is used to run both the server and the client with one command:
+
+npm run dev
+
+See the server package.json for scripts to run just the server or the client.
