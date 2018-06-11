@@ -38,6 +38,7 @@
   margin: 0 5px;
   transition: 200ms linear;
   font-size: 1.15em;
+  cursor: pointer;
 }
 
 .btn:hover {

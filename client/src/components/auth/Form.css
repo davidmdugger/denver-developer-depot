@@ -24,6 +24,7 @@ form input[type="submit"]:hover {
 
 form input[type="submit"]{
   margin-top: 25px;
+  cursor: pointer;
 }
 
 form .invalid {
