@@ -32,7 +32,21 @@ This project uses React for frontent rendering.
 Redux is used to manage state.
 
 # Get it running
-Feel free to clone the project.
+Feel free to clone the project. If you do clone the project and want to use mongoDB, you will need to create a config folder and keys file for your database URI and the secret key. For example:
+
+config/keys.js
+
+module.exports = {
+  mongoURI: YOUR_DB_URI,
+  secretOrKey: YOUR_SECRET
+};
+
+Your connection to the server and db are connected via this line in the server.js file:
+
+// DB config
+const db = require("./config/keys").mongoURI;
+
+Client runs on port 3000; server on 8000.
 
 Concurrently is used to run both the server and the client with one command:
 
