@@ -1,7 +1,9 @@
 import React, { Component } from "react";
-import "./Form.css";
+import propTypes from "prop-types";
+import { connect } from "react-redux";
+import { registerUser } from "../../actions/authActions";
 
-import axios from "axios";
+import "./Form.css";
 
 class Register extends Component {
   state = {
@@ -11,6 +13,13 @@ class Register extends Component {
     password2: "",
     errors: {}
   };
+
+  componentWillReceiveProps(nextProps) {
+    console.log(nextProps.errors);
+    if (nextProps.errors) {
+      this.setState({ errors: nextProps.errors });
+    }
+  }
 
   onChange = e => {
     this.setState({
@@ -32,11 +41,8 @@ class Register extends Component {
       password2: this.state.password2
     };
 
-    axios
-      .post("/api/users/register", newUser)
-      .then(res => console.log(res.data))
-      .catch(err => this.setState({ errors: err.response.data }));
-  }
+    this.props.registerUser(newUser);
+  };
 
   render() {
     const { errors } = this.state;
@@ -48,48 +54,64 @@ class Register extends Component {
         </div>
 
         <input
-          className={errors.name ? 'invalid' : null}
+          className={errors.name ? "invalid" : null}
           type="text"
           name="name"
           placeholder="John Doe"
           value={this.state.name}
           onChange={this.onChange}
         />
-        {errors.name && (<div><small className="invalid-desc">{errors.name}</small></div>)}
+        {errors.name && (
+          <div>
+            <small className="invalid-desc">{errors.name}</small>
+          </div>
+        )}
 
         <input
-          className={errors.email ? 'invalid' : null}
+          className={errors.email ? "invalid" : null}
           type="email"
           name="email"
           placeholder="your@email.com"
           value={this.state.email}
           onChange={this.onChange}
         />
-        {errors.email && (<div><small className="invalid-desc">{errors.email}</small></div>)}
+        {errors.email && (
+          <div>
+            <small className="invalid-desc">{errors.email}</small>
+          </div>
+        )}
 
         <small>
           This site uses gravatar. If you want an avatar, use an email with your
           image
         </small>
         <input
-          className={errors.password ? 'invalid' : null}
+          className={errors.password ? "invalid" : null}
           type="password"
           name="password"
           placeholder="password"
           value={this.state.password}
           onChange={this.onChange}
         />
-        {errors.password && (<div><small className="invalid-desc">{errors.password}</small></div>)}
+        {errors.password && (
+          <div>
+            <small className="invalid-desc">{errors.password}</small>
+          </div>
+        )}
 
         <input
-          className={errors.password2 ? 'invalid' : null}
+          className={errors.password2 ? "invalid" : null}
           type="password"
           name="password2"
           placeholder="confirm password"
           value={this.state.password2}
           onChange={this.onChange}
         />
-        {errors.password2 && (<div><small className="invalid-desc">{errors.password2}</small></div>)}
+        {errors.password2 && (
+          <div>
+            <small className="invalid-desc">{errors.password2}</small>
+          </div>
+        )}
 
         <input type="submit" className="btn" value="Sign Me Up!" />
       </form>
@@ -97,4 +119,18 @@ class Register extends Component {
   }
 }
 
-export default Register;
+Register.propTypes = {
+  registerUser: propTypes.func.isRequired,
+  auth: propTypes.object.isRequired,
+  errors: propTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+  auth: state.auth, // auth comes from our rootReducer
+  errors: state.errors
+});
+
+export default connect(
+  mapStateToProps,
+  { registerUser }
+)(Register);

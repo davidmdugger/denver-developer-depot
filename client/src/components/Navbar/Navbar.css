@@ -1,4 +1,8 @@
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: #ccecfb;
   height: 55px;
   color: #003255;
@@ -27,7 +31,7 @@ header #logo {
 }
 
 #nav-container a:hover {
-  background-color: #FFE000;
+  background-color: #ffe000;
   color: #003255;
 }
 

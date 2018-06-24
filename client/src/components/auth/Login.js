@@ -46,7 +46,7 @@ class Login extends Component {
           value={this.state.password}
           onChange={this.onChange}
         />
-        <input type="submit" className="btn" value="Sign Me Up!" />
+        <input type="submit" className="btn" value="Sign In" />
       </form>
     );
   }

@@ -6,7 +6,9 @@ import logo from "../../img/logo.png";
 const Navbar = () => {
   return (
     <header>
-      <Link to="/"><img id="logo" src={logo} alt="Logo" /></Link>
+      <Link to="/">
+        <img id="logo" src={logo} alt="Logo" />
+      </Link>
       <nav>
         <ul id="nav-container">
           <Link to="/profiles">

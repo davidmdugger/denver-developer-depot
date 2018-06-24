@@ -2,15 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Landing.css";
 
-export default () => {
+const Landing = () => {
   return (
     <div id="landing">
       <div id="landing-content">
-        <h1>Denver Developer Depot</h1>
-        <h5>Where Denver's Developers share their tech secrets</h5>
+        <h1>Developer Depot</h1>
+        <h5>Where Colorado's developers connect</h5>
         <div className="btn-container">
           <Link to="/profiles">
-            <button className="btn main">Profiles</button>
+            <button className="btn main">Developers</button>
           </Link>
           <Link to="/login">
             <button className="btn main">Login</button>
@@ -23,3 +23,5 @@ export default () => {
     </div>
   );
 };
+
+export default Landing;
