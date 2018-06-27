@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { Provider } from "react-redux";
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
-import { setCurrentUser } from "./actions/authActions";
-import { logoutUser } from "./actions/authActions";
+import { setCurrentUser, logoutUser } from "./actions/authActions";
+import { clearCurrentProfile } from "./actions/profileActions";
 
 import store from "./store";
 
@@ -19,14 +19,13 @@ if (token) {
   const decodedUser = jwt_decode(token);
   // Set user and isAuthenticated
   store.dispatch(setCurrentUser(decodedUser));
-
   // check for expired token
   const currentTime = Date.now() / 1000;
   if (decodedUser.exp < currentTime) {
     // Logout User
     store.dispatch(logoutUser());
-    // TODO: clear current profile
-    // coming soon
+    // clear current profile
+    store.dispatch(clearCurrentProfile());
     window.location.href = "/login";
   }
 }
