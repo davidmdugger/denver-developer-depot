@@ -42,7 +42,7 @@ class Register extends Component {
       password2: this.state.password2
     };
 
-    this.props.registerUser(newUser, this.props.history);
+    this.props.registerUser(newUser, this.props.history); // comes from our mapStateToProps
   };
 
   render() {
@@ -127,8 +127,8 @@ Register.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  auth: state.auth, // auth comes from our rootReducer
-  errors: state.errors
+  auth: state.auth, // state.auth comes from our rootReducer
+  errors: state.errors // state.errors comes from our rootReducer
 });
 
 export default connect(

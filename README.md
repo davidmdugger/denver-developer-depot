@@ -25,20 +25,26 @@ bcryptjs is used for password encryption and decryption.
 Validator is used for server side validation
 
 # Client Dependencies
+
 The client runs on port 3000.
 
 This project uses React for frontend rendering.
 
-Redux is used to manage state.
+Redux is used to manage global state.
+
+Axios is used for AJAX requests, and common header injection.
+
+jwt-decode is used to decode the JSON Web Token on the client to extract the user details.
 
 # Get it running
+
 Feel free to clone the project. If you do clone the project and want to use mongoDB, you will need to create a config folder and keys file for your database URI and the secret key. For example:
 
 config/keys.js
 
 module.exports = {
-  mongoURI: YOUR_DB_URI,
-  secretOrKey: YOUR_SECRET
+mongoURI: YOUR_DB_URI,
+secretOrKey: YOUR_SECRET
 };
 
 Your connection to the server and db are connected via this line in the server.js file:
