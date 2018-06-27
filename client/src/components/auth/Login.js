@@ -61,16 +61,16 @@ class Login extends Component {
         )}
 
         <input
-          className={errors.email ? "invalid" : null}
+          className={errors.password ? "invalid" : null}
           type="password"
           name="password"
           placeholder="password"
           value={this.state.password}
           onChange={this.onChange}
         />
-        {errors.email && (
+        {errors.password && (
           <div>
-            <small className="invalid-desc">{errors.email}</small>
+            <small className="invalid-desc">{errors.password}</small>
           </div>
         )}
 
