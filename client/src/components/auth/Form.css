@@ -5,6 +5,7 @@ form {
   max-width: 700px;
   margin: 30px auto;
 }
+
 form .form-title {
   margin: 0 auto 20px auto;
   text-align: center;
@@ -24,6 +25,7 @@ form input[type="submit"]:hover {
 }
 
 form input[type="submit"] {
+  background-color: #ffe100;
   margin-top: 25px;
   cursor: pointer;
 }

@@ -3,6 +3,7 @@ import propTypes from "prop-types";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { registerUser } from "../../actions/authActions";
+import TextFieldGroup from "../common/TextFieldGroup";
 
 import "./Form.css";
 
@@ -60,65 +61,42 @@ class Register extends Component {
           <h4>Create your account</h4>
         </div>
 
-        <input
-          className={errors.name ? "invalid" : null}
-          type="text"
-          name="name"
+        <TextFieldGroup
           placeholder="John Doe"
+          name="name"
+          type="text"
           value={this.state.name}
           onChange={this.onChange}
+          error={errors.name}
         />
-        {errors.name && (
-          <div>
-            <small className="invalid-desc">{errors.name}</small>
-          </div>
-        )}
 
-        <input
-          className={errors.email ? "invalid" : null}
-          type="email"
-          name="email"
+        <TextFieldGroup
           placeholder="your@email.com"
+          name="email"
+          type="email"
           value={this.state.email}
           onChange={this.onChange}
+          error={errors.email}
+          info="This site uses Gravatar"
         />
-        {errors.email && (
-          <div>
-            <small className="invalid-desc">{errors.email}</small>
-          </div>
-        )}
 
-        <small>
-          This site uses gravatar. If you want an avatar, use an email with your
-          image
-        </small>
-        <input
-          className={errors.password ? "invalid" : null}
-          type="password"
-          name="password"
+        <TextFieldGroup
           placeholder="password"
+          name="password"
+          type="password"
           value={this.state.password}
           onChange={this.onChange}
+          error={errors.password}
         />
-        {errors.password && (
-          <div>
-            <small className="invalid-desc">{errors.password}</small>
-          </div>
-        )}
 
-        <input
-          className={errors.password2 ? "invalid" : null}
-          type="password"
-          name="password2"
+        <TextFieldGroup
           placeholder="confirm password"
+          name="password2"
+          type="password"
           value={this.state.password2}
           onChange={this.onChange}
+          error={errors.password2}
         />
-        {errors.password2 && (
-          <div>
-            <small className="invalid-desc">{errors.password2}</small>
-          </div>
-        )}
 
         <input type="submit" className="btn" value="Sign Me Up!" />
       </form>

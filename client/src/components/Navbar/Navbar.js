@@ -12,6 +12,7 @@ class Navbar extends Component {
     e.preventDefault();
     this.props.logoutUser();
   };
+
   render() {
     const { isAuthenticated, user } = this.props.auth;
     const guestLinks = (

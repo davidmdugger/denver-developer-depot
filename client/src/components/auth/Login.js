@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import propTypes from "prop-types";
 import { connect } from "react-redux";
 import { loginUser } from "../../actions/authActions";
+import TextFieldGroup from "../common/TextFieldGroup";
 import "./Form.css";
 
 class Login extends Component {
@@ -41,8 +42,6 @@ class Login extends Component {
       password: this.state.password
     };
 
-    console.log(userData);
-
     this.props.loginUser(userData);
   };
 
@@ -54,33 +53,24 @@ class Login extends Component {
           <h1>Login</h1>
           <h4>Sign into your account</h4>
         </div>
-        <input
-          className={errors.email ? "invalid" : null}
-          type="email"
+
+        <TextFieldGroup
+          placeholder="Email Address"
           name="email"
-          placeholder="your@email.com"
+          type="email"
           value={this.state.email}
           onChange={this.onChange}
+          error={errors.email}
         />
-        {errors.email && (
-          <div>
-            <small className="invalid-desc">{errors.email}</small>
-          </div>
-        )}
 
-        <input
-          className={errors.password ? "invalid" : null}
-          type="password"
-          name="password"
+        <TextFieldGroup
           placeholder="password"
+          name="password"
+          type="password"
           value={this.state.password}
           onChange={this.onChange}
+          error={errors.password}
         />
-        {errors.password && (
-          <div>
-            <small className="invalid-desc">{errors.password}</small>
-          </div>
-        )}
 
         <input type="submit" className="btn" value="Sign In" />
       </form>

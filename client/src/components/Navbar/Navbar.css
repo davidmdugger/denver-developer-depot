@@ -43,6 +43,10 @@ header #logo {
   align-items: center;
 }
 
+.user-nav {
+  cursor: pointer;
+}
+
 .user-nav img {
   margin-right: 5px;
   width: 30px;
