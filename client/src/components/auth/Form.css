@@ -14,6 +14,14 @@ form .form-title {
 form input {
   width: 100%;
   height: 40px;
+  margin-top: 20px;
+  font-size: 1em;
+  padding-left: 5px;
+}
+
+form select {
+  width: 100%;
+  height: 40px;
   margin-top: 10px;
   font-size: 1em;
   padding-left: 5px;
@@ -25,9 +33,18 @@ form input[type="submit"]:hover {
 }
 
 form input[type="submit"] {
-  background-color: #ffe100;
+  background-color: #27ae60;
+  color: #fff;
   margin-top: 25px;
   cursor: pointer;
+}
+
+form textarea {
+  width: 100%;
+  height: 200px;
+  margin-top: 20px;
+  font-size: 1em;
+  padding-left: 5px;
 }
 
 form .invalid {
@@ -37,4 +54,27 @@ form .invalid {
 form .invalid-desc {
   color: #ff0000;
   padding-left: 20px;
+}
+
+form .input-social {
+  display: flex;
+  align-items: center;
+}
+
+form .input-social i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  height: 40px;
+  width: 40px;
+  background-color: #3498db;
+}
+
+.slowdown {
+  transition: all 250ms;
+}
+
+form .input-social i {
+  color: #fff;
 }

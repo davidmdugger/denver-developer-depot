@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import "./Layout.css";
 
@@ -10,6 +10,9 @@ import Footer from "../Footer/Footer";
 import Register from "../auth/Register";
 import Login from "../auth/Login";
 import Dashboard from "../Dashboard/Dashboard";
+import CreateProfile from "../CreateProfile/CreateProfile";
+
+import PrivateRoute from "../common/PrivateRoute";
 
 const Layout = props => {
   return (
@@ -19,7 +22,16 @@ const Layout = props => {
         <Route exact path="/" component={Landing} />
         <Route exact path="/register" component={Register} />
         <Route exact path="/login" component={Login} />
-        <Route exact path="/dashboard" component={Dashboard} />
+        <Switch>
+          <PrivateRoute exact path="/dashboard" component={Dashboard} />
+        </Switch>
+        <Switch>
+          <PrivateRoute
+            exact
+            path="/create-profile"
+            component={CreateProfile}
+          />
+        </Switch>
         <Footer />
       </div>
     </Router>
