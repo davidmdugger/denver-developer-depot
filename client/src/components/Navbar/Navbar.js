@@ -30,6 +30,9 @@ class Navbar extends Component {
 
     const authLinks = (
       <React.Fragment>
+        <Link to="/dashboard">
+          <li>Dashboard</li>
+        </Link>
         <a onClick={this.logoutUserHandler}>
           <li className="user-nav">
             <img

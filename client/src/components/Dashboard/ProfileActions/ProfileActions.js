@@ -7,7 +7,7 @@ const ProfileActions = () => {
   return (
     <React.Fragment>
       <ul className="profile-actions">
-        <Link to="#">
+        <Link to="/edit-profile">
           <li>
             <i className="fa fa-user-circle" />Edit
           </li>

@@ -11,6 +11,7 @@ import Register from "../auth/Register";
 import Login from "../auth/Login";
 import Dashboard from "../Dashboard/Dashboard";
 import CreateProfile from "../CreateProfile/CreateProfile";
+import EditProfile from "../EditProfile/EditProfile";
 
 import PrivateRoute from "../common/PrivateRoute";
 
@@ -31,6 +32,9 @@ const Layout = props => {
             path="/create-profile"
             component={CreateProfile}
           />
+        </Switch>
+        <Switch>
+          <PrivateRoute exact path="/edit-profile" component={EditProfile} />
         </Switch>
         <Footer />
       </div>
