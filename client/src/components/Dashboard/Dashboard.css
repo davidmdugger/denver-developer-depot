@@ -5,7 +5,18 @@
 .dashboard-content {
   width: 80%;
   max-width: 800px;
-  text-align: center;
   margin: auto;
   box-shadow: 1px 1px 10px #ccc;
+  padding-left: 20px;
+}
+
+.btn-alert {
+  background-color: #ff5252;
+  color: #fff;
+}
+
+.btn-alert:hover {
+  background-color: #fff;
+  color: #ff5252;
+  border: 1px solid #ff5252;
 }

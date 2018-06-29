@@ -1,0 +1,22 @@
+.profile-actions {
+  display: flex;
+  margin: 20px 0;
+}
+
+.profile-actions li {
+  list-style: none;
+  border: 1px solid #454545;
+  padding: 5px;
+  background-color: #eee;
+  color: #343434;
+  font-size: 0.6em;
+  transition: all linear 200ms;
+}
+
+.profile-actions li .fa {
+  margin-right: 3px;
+}
+
+.profile-actions li:hover {
+  background-color: #ccc;
+}

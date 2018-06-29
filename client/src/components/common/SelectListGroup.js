@@ -9,6 +9,7 @@ const SelectListGroup = ({ name, value, error, info, onChange, options }) => {
       </option>
     );
   });
+
   return (
     <React.Fragment>
       <select

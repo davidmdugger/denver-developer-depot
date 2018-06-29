@@ -7,7 +7,7 @@ import TextFieldGroupSocial from "../common/TextFieldGroupSocial";
 import SelectListGroup from "../common/SelectListGroup";
 import TextAreaFieldGroup from "../common/TextAreaFieldGroup";
 
-import { createProfile } from "../../actions/profileActions";
+import { createProfile, getCurrentProfile } from "../../actions/profileActions";
 
 import "./CreateProfile.css";
 
@@ -29,6 +29,10 @@ class CreateProfile extends Component {
     instagram: "",
     errors: {}
   };
+
+  componentDidMount() {
+    this.props.getCurrentProfile();
+  }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.errors) this.setState({ errors: nextProps.errors });
@@ -214,7 +218,9 @@ class CreateProfile extends Component {
 
 CreateProfile.propTypes = {
   profile: propTypes.object.isRequired,
-  errors: propTypes.object.isRequired
+  errors: propTypes.object.isRequired,
+  getCurrentProfile: propTypes.func.isRequired,
+  createProfile: propTYpes.func.isRequired
 };
 
 const mapStateToProps = state => ({
@@ -224,5 +230,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { createProfile }
+  { createProfile, getCurrentProfile }
 )(withRouter(CreateProfile));
