@@ -5,12 +5,11 @@ const TextFieldGroup = ({
   name,
   placeholder,
   value,
-  label,
   error,
   info,
   type,
   onChange,
-  disable
+  disabled
 }) => {
   return (
     <React.Fragment>
@@ -21,6 +20,7 @@ const TextFieldGroup = ({
         placeholder={placeholder}
         value={value}
         onChange={onChange}
+        disabled={disabled}
       />
       {info ? <small>{info}</small> : null}
 

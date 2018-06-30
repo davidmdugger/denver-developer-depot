@@ -47,6 +47,11 @@ form textarea {
   padding-left: 5px;
 }
 
+form input:disabled {
+  background-color: #ccc;
+  border: none;
+}
+
 form .invalid {
   border: 1px solid #ff0000;
 }
@@ -69,10 +74,6 @@ form .input-social i {
   height: 40px;
   width: 40px;
   background-color: #3498db;
-}
-
-.slowdown {
-  transition: all 250ms;
 }
 
 form .input-social i {

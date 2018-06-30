@@ -12,7 +12,7 @@ const ProfileActions = () => {
             <i className="fa fa-user-circle" />Edit
           </li>
         </Link>
-        <Link to="#">
+        <Link to="/add-experience">
           <li>
             <i className="fa fa-black-tie" />Add Experience
           </li>
