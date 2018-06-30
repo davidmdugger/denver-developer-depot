@@ -20,3 +20,13 @@
   color: #ff5252;
   border: 1px solid #ff5252;
 }
+
+.dashboard-content table {
+  width: 100%;
+  border: 2px solid black;
+  font-size: 0.8em;
+}
+
+.dashboard-content table .data-row {
+  border: 1px solid orange;
+}

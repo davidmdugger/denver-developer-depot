@@ -4,8 +4,10 @@ import propTypes from "prop-types";
 import { connect } from "react-redux";
 import { getCurrentProfile, deleteAccount } from "../../actions/profileActions";
 
+// components
 import Spinner from "../common/Spinner";
 import ProfileAdditions from "./ProfileAdditions/ProfileAdditions";
+import Experience from "./Experience";
 
 import "./Dashboard.css";
 
@@ -34,6 +36,7 @@ class Dashboard extends Component {
               Welcome <Link to={`/profile/${profile.handle}`}>{user.name}</Link>
             </h5>
             <ProfileAdditions />
+            <Experience experience={profile.experience} />
           </React.Fragment>
         );
       } else {
