@@ -6,7 +6,7 @@ import { connect } from "react-redux";
 import propTypes from "prop-types";
 import { addExperience } from "../../../actions/profileActions";
 
-import "./Experience.css";
+import "../Credentials.css";
 
 class Experience extends Component {
   state = {

@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { getCurrentProfile, deleteAccount } from "../../actions/profileActions";
 
 import Spinner from "../common/Spinner";
-import ProfileActions from "./ProfileActions/ProfileActions";
+import ProfileAdditions from "./ProfileAdditions/ProfileAdditions";
 
 import "./Dashboard.css";
 
@@ -33,7 +33,7 @@ class Dashboard extends Component {
             <h5>
               Welcome <Link to={`/profile/${profile.handle}`}>{user.name}</Link>
             </h5>
-            <ProfileActions />
+            <ProfileAdditions />
           </React.Fragment>
         );
       } else {

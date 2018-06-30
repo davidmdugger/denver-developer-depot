@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import "./ProfileActions.css";
+import "./ProfileAdditions.css";
 
-const ProfileActions = () => {
+const ProfileAdditions = () => {
   return (
     <React.Fragment>
       <ul className="profile-actions">
@@ -17,7 +17,7 @@ const ProfileActions = () => {
             <i className="fa fa-black-tie" />Add Experience
           </li>
         </Link>
-        <Link to="#">
+        <Link to="/add-education">
           <li>
             <i className="fa fa-graduation-cap" />Add Education
           </li>
@@ -27,4 +27,4 @@ const ProfileActions = () => {
   );
 };
 
-export default ProfileActions;
+export default ProfileAdditions;

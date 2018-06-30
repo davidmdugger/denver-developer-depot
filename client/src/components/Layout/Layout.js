@@ -12,7 +12,8 @@ import Login from "../auth/Login";
 import Dashboard from "../Dashboard/Dashboard";
 import CreateProfile from "../CreateProfile/CreateProfile";
 import EditProfile from "../EditProfile/EditProfile";
-import Experience from "../Credentials/Experience/Experience";
+import AddExperience from "../Credentials/AddExperience/AddExperience";
+import AddEducation from "../Credentials/AddEducation/AddEducation";
 
 import PrivateRoute from "../common/PrivateRoute";
 
@@ -39,7 +40,14 @@ const Layout = props => {
         </Switch>
 
         <Switch>
-          <PrivateRoute exact path="/add-experience" component={Experience} />
+          <PrivateRoute
+            exact
+            path="/add-experience"
+            component={AddExperience}
+          />
+        </Switch>
+        <Switch>
+          <PrivateRoute exact path="/add-education" component={AddEducation} />
         </Switch>
         <Footer />
       </div>
