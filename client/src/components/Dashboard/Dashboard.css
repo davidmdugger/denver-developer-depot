@@ -54,6 +54,7 @@
 .dashboard-content table tr .dates,
 .dashboard-content table tr .heading-dates {
   flex: 1;
+  text-align: center;
 }
 
 .dashboard-content table tr .delete,
