@@ -6,7 +6,6 @@
   width: 80%;
   max-width: 800px;
   margin: auto;
-  box-shadow: 1px 1px 10px #ccc;
   padding-left: 20px;
 }
 
@@ -22,11 +21,51 @@
 }
 
 .dashboard-content table {
+  margin: 40px auto;
   width: 100%;
-  border: 2px solid black;
   font-size: 0.8em;
 }
 
-.dashboard-content table .data-row {
-  border: 1px solid orange;
+.dashboard-content table tbody tr {
+  align-items: center;
+  padding: 15px 0 15px 5px;
+}
+
+.dashboard-content table tr {
+  display: flex;
+}
+
+.dashboard-content table th {
+  padding: 5px 0;
+  border-top: 1px solid #343434;
+  border-bottom: 1px solid #ccc;
+}
+
+.dashboard-content table tr .company,
+.dashboard-content table tr .heading-company {
+  flex: 1;
+}
+
+.dashboard-content table tr .title,
+.dashboard-content table tr .heading-title {
+  flex: 2;
+}
+
+.dashboard-content table tr .dates,
+.dashboard-content table tr .heading-dates {
+  flex: 1;
+}
+
+.dashboard-content table tr .delete,
+.dashboard-content table tr .heading-delete {
+  flex: 1;
+  text-align: center;
+}
+
+.dashboard-content table tr .btn {
+  font-size: 0.7em;
+}
+
+.dashboard-content table tr:nth-child(2) {
+  background-color: #ddd;
 }

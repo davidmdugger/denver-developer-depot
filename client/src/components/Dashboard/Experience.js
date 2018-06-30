@@ -10,18 +10,20 @@ class Experience extends Component {
   render() {
     const experience = this.props.experience.map(exp => (
       <tr className="data-row" key={exp._id}>
-        <td>{exp.company}</td>
-        <td>{exp.title}</td>
-        <td>
+        <td className="company">{exp.company}</td>
+        <td className="title">{exp.title}</td>
+        <td className="dates">
           {exp.from.substr(0, exp.from.indexOf("T")).replace(/-/g, "/")} -{" "}
-          {exp.to === null ? "Current" : exp.to}
+          {exp.to === null
+            ? "Current"
+            : exp.to.substr(0, exp.to.indexOf("T")).replace(/-/g, "/")}
         </td>
-        <td>
+        <td className="delete">
           <button
             onClick={() => this.deleteExpHandler(exp._id)}
             className="btn btn-alert"
           >
-            Delete Experience
+            Remove
           </button>
         </td>
       </tr>
@@ -30,15 +32,15 @@ class Experience extends Component {
       <div>
         <h4>Experience Credentials</h4>
         <table>
-          <tbody>
+          <thead>
             <tr className="data-heading">
-              <th>Company</th>
-              <th>Title</th>
-              <th>Years</th>
-              <th />
+              <th className="heading-company">Company</th>
+              <th className="heading-title">Title</th>
+              <th className="heading-dates">Years</th>
+              <th className="heading-delete" />
             </tr>
-            {experience}
-          </tbody>
+          </thead>
+          <tbody>{experience}</tbody>
         </table>
       </div>
     );
