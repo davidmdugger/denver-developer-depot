@@ -15,6 +15,7 @@ import EditProfile from "../EditProfile/EditProfile";
 import AddExperience from "../Credentials/AddExperience/AddExperience";
 import AddEducation from "../Credentials/AddEducation/AddEducation";
 import Profiles from "../Profiles/Profiles";
+import Profile from "../Profile/Profile";
 
 import PrivateRoute from "../common/PrivateRoute";
 
@@ -51,7 +52,7 @@ const Layout = props => {
           <PrivateRoute exact path="/add-education" component={AddEducation} />
         </Switch>
         <Route exact path="/profiles" component={Profiles} />
-
+        <Route exact path="/profile/:handle" component={Profile} />
         <Footer />
       </div>
     </Router>

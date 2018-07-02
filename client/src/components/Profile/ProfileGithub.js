@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class ProfileGithub extends Component {
   render() {
     return (
-      <div>
+      <div className="profile-github">
         <h1>Profile Github</h1>
       </div>
     );

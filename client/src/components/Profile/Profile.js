@@ -27,16 +27,20 @@ class Profile extends Component {
     } else {
       profileContent = (
         <React.Fragment>
-          <Link to="/profiles">Back</Link>
           <ProfileHeader profile={profile} />
-          <ProfileAbout />
-          <ProfileCreds />
+          <ProfileAbout profile={profile} />
+          <ProfileCreds profile={profile} />
           <ProfileGithub />
         </React.Fragment>
       );
     }
 
-    return <div className="profile-container">{profileContent}</div>;
+    return (
+      <div className="profile-container">
+        <Link to="/profiles">Back</Link>
+        {profileContent}
+      </div>
+    );
   }
 }
 

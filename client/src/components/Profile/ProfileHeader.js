@@ -1,42 +1,54 @@
 import React from "react";
 import isEmpty from "../../validation/is-empty";
+import Spinner from "../common/Spinner";
+import { link } from "fs";
 
 const ProfileHeader = props => {
-  console.log(props.profile);
-  if (isEmpty(props.profile.profile)) {
-    console.log("none");
-  } else {
-    console.log(props.profile.profile);
-  }
-  // let userHandle, userStatus, userSocials;
-  // if (profile.profile === null) {
-  //   userHandle = "User with no handle";
-  //   userStatus = "No experience listed";
-  //   userSocials = null;
-  // } else {
-  //   // check if user has social links
-  //   if (isEmpty(profile.profile.social)) {
-  //     userSocials = null;
-  //   } else {
-  //     userSocials = Object.values(profile.profile.social).map((social, i) => {
-  //       return (
-  //         <div key={i} className="social-links">
-  //           <a href={social} target="_blank">
-  //             <div>{social}</div>
-  //           </a>
-  //         </div>
-  //       );
-  //     });
-  //   }
-  //   userHandle = profile.profile.handle;
-  //   userStatus = profile.profile.status;
-  // }
+  const { profile } = props;
+  let profileDisplay;
+  // if the profile exists, display the profile data
+  if (profile.profile) {
+    const { handle, status, social, website } = profile.profile;
+    profileDisplay = (
+      <React.Fragment>
+        <img src="http://via.placeholder.com/100x100" alt="user" />
+        <h3>{handle}</h3>
+        <h4>{status}</h4>
 
-  return (
-    <div className="profile-header">
-      <h1>User Profile</h1>
-    </div>
-  );
+        <div className="social-links">
+          {isEmpty(website) ? null : (
+            <p>
+              <a href={`http://${website}`} target="_blank">
+                <i className="fa fa-globe" />
+              </a>
+            </p>
+          )}
+          {isEmpty(social && social.facebook) ? null : (
+            <a href={social.facebook} target="_blank">
+              <i className="fa fa-facebook" />
+            </a>
+          )}
+          {isEmpty(social && social.twitter) ? null : (
+            <a href={social.twitter} target="_blank">
+              <i className="fa fa-twitter" />
+            </a>
+          )}
+          {isEmpty(social && social.linkedin) ? null : (
+            <a href={social.linkedin} target="_blank">
+              <i className="fa fa-linkedin" />
+            </a>
+          )}
+        </div>
+      </React.Fragment>
+    );
+  } else {
+    profileDisplay = (
+      <React.Fragment>
+        <Spinner />
+      </React.Fragment>
+    );
+  }
+  return <div className="profile-header">{profileDisplay}</div>;
 };
 
 export default ProfileHeader;

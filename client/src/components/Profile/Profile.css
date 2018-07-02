@@ -1,23 +1,108 @@
 .profile-container {
-  border: 1px solid black;
   width: 95%;
   max-width: 800px;
   margin: 20px auto;
+  color: #c5edfd;
+  font-size: 16px;
 }
 
 .profile-container .profile-header {
-  background-color: #ccc;
-  border: 1px solid blue;
+  background-color: #565656;
+  width: 100%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.profile-container .profile-about {
-  border: 1px solid green;
+.profile-container .profile-header img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
 }
 
-.profile-container .profile-creds {
-  border: 1px solid yellow;
+.profile-container .heading-title {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.profile-container .profile-about,
+.profile-container .profile-creds-container,
+.profile-container .profile-github {
+  padding: 10px;
+}
+
+.profile-container .profile-about,
+.profile-container .profile-creds-container {
+  border: 1px solid #565656;
+  border-top: none;
+  border-bottom: none;
+  color: #565656;
 }
 
 .profile-container .profile-github {
-  border: 1px solid pink;
+  border: 1px solid #565656;
+  border-top: none;
+  color: #565656;
+}
+
+.social-links {
+  display: flex;
+}
+
+.social-links .fa {
+  margin-right: 5px;
+  color: #c5edfd;
+}
+
+/* Profile About */
+.profile-about .skills {
+  margin: 10px 0;
+}
+.profile-about .skills .skill-item {
+  font-size: 0.75em;
+  margin-right: 8px;
+  background-color: #565656;
+  color: #c5edfd;
+  padding: 5px;
+  border-radius: 2px;
+}
+
+/* Profile Creds */
+.profile-creds-container {
+  font-size: 12px;
+}
+
+.profile-creds-container .creds-content .experience-display,
+.profile-creds-container .creds-content .education-display {
+  border: 1px solid #d6d6d6;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.profile-creds-container .creds-content .experience-display .experience,
+.profile-creds-container .creds-content .experience-display .eduation {
+  margin-bottom: 20px;
+}
+/* .profile-creds {
+} */
+
+/* .profile-container .separator {
+  width: 60%;
+  margin: 60px auto 40px auto;
+  border: 1px solid #d6d6d6;
+} */
+
+@media only screen and (min-width: 768px) {
+  .profile-creds-container .creds-content {
+    display: flex;
+  }
+
+  .profile-creds-container .creds-content .experience-display,
+  .profile-creds-container .creds-content .education-display {
+    flex: 1;
+    margin: 0 5px;
+  }
 }
