@@ -1,7 +1,6 @@
 import React from "react";
 import isEmpty from "../../validation/is-empty";
 import Spinner from "../common/Spinner";
-import { link } from "fs";
 
 const ProfileHeader = props => {
   const { profile } = props;

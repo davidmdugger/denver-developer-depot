@@ -9,6 +9,8 @@ import ProfileGithub from "./ProfileGithub";
 import Spinner from "../common/Spinner";
 import { getProfileByHandle } from "../../actions/profileActions";
 
+import isEmpty from "../../validation/is-empty";
+
 import "./Profile.css";
 
 class Profile extends Component {
@@ -21,16 +23,22 @@ class Profile extends Component {
   render() {
     const { profile, loading } = this.props;
     let profileContent;
+    let githubRender;
 
     if (profile === null || loading) {
       profileContent = <Spinner />;
     } else {
+      if (profile.profile) {
+        githubRender = profile.profile.githubusername;
+      }
       profileContent = (
         <React.Fragment>
           <ProfileHeader profile={profile} />
           <ProfileAbout profile={profile} />
           <ProfileCreds profile={profile} />
-          <ProfileGithub />
+          {isEmpty(githubRender) ? null : (
+            <ProfileGithub username={profile.profile.githubusername} />
+          )}
         </React.Fragment>
       );
     }

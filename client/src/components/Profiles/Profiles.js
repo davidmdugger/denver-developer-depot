@@ -14,9 +14,9 @@ class Profiles extends Component {
   }
 
   render() {
-    const { profiles, loading } = this.props.profile;
+    const { profiles } = this.props.profile;
     console.log(profiles);
-    let profileItems;
+    let profileItems = <Spinner />;
 
     if (profiles === null) {
       profileItems = <h4>No profiles found</h4>;

@@ -1,5 +1,4 @@
 import React from "react";
-import isEmpty from "../../validation/is-empty";
 import Spinner from "../common/Spinner";
 
 const ProfileCreds = props => {
@@ -42,11 +41,11 @@ const ProfileCreds = props => {
       <h2 className="heading-title">Credentials</h2>
       <div className="creds-content">
         <div className="experience-display">
-          <h2>Experience</h2>
+          <h2 className="subheading-title">Experience</h2>
           {expDisplay}
         </div>
         <div className="education-display">
-          <h2>Education</h2>
+          <h2 className="subheading-title">Education</h2>
           {eduDisplay}
         </div>
       </div>

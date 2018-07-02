@@ -75,6 +75,10 @@
   font-size: 12px;
 }
 
+.profile-creds-container .subheading-title {
+  margin-bottom: 5px;
+}
+
 .profile-creds-container .creds-content .experience-display,
 .profile-creds-container .creds-content .education-display {
   border: 1px solid #d6d6d6;
@@ -82,19 +86,46 @@
   padding: 20px;
 }
 
+.profile-creds-container .creds-content p {
+  margin: 5px 0 0 10px;
+}
+
 .profile-creds-container .creds-content .experience-display .experience,
 .profile-creds-container .creds-content .experience-display .eduation {
   margin-bottom: 20px;
 }
-/* .profile-creds {
-} */
 
-/* .profile-container .separator {
-  width: 60%;
-  margin: 60px auto 40px auto;
+/* ProfileGithub */
+.profile-github .heading-title {
+  margin-top: 60px;
+}
+.profile-github .github-repo-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.profile-github .github-repo {
+  width: 250px;
+  min-height: 150px;
+  margin: 3px 2px 10px 2px;
+  padding: 8px;
+  border: 1px solid transparent;
+  transition: linear 300ms;
+}
+
+.profile-github .github-repo:hover {
   border: 1px solid #d6d6d6;
-} */
+}
 
+.profile-github .repo-description {
+  margin-top: 8px;
+  font-size: 0.75em;
+  color: #a4a4a4;
+}
+
+/* =======================
+    MEDIA QUERIES
+========================== */
 @media only screen and (min-width: 768px) {
   .profile-creds-container .creds-content {
     display: flex;
