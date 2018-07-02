@@ -1,0 +1,60 @@
+.profiles-container {
+  margin: 20px auto;
+  width: 80%;
+  max-width: 800px;
+}
+
+.profiles-container .title-div {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.user-profile {
+  display: flex;
+  margin: 10px auto;
+  width: 90%;
+  min-height: 150px;
+  background-color: #eee;
+  overflow: scroll;
+  padding: 10px 5px;
+  font-size: 0.8em;
+}
+
+.user-profile button {
+  background-color: #545454;
+  border: none;
+  color: #fff;
+  padding: 4px;
+}
+
+.user-profile img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+}
+
+.user-profile .user-image {
+  flex: 1;
+}
+
+.user-profile .user-details {
+  flex: 1;
+}
+
+.user-profile .user-skills {
+  display: none;
+}
+
+.user-profile .user-skills ul li {
+  list-style: none;
+  background-color: #fff;
+  margin-bottom: 2px;
+  padding: 5px;
+}
+
+@media screen and (min-width: 800px) {
+  .user-profile .user-skills {
+    display: block;
+    flex: 1;
+  }
+}

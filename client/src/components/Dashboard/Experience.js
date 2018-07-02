@@ -11,27 +11,36 @@ class Experience extends Component {
   };
 
   render() {
-    const experience = this.props.experience.map(exp => (
-      <tr className="data-row" key={exp._id}>
-        <td className="company">{exp.company}</td>
-        <td className="title">{exp.title}</td>
-        <td className="dates">
-          {dateFormat(exp.from)} -{" "}
-          {exp.to === null ? "Current" : dateFormat(exp.to)}
-        </td>
-        <td className="delete">
-          <button
-            onClick={() => this.deleteExpHandler(exp._id)}
-            className="btn btn-alert"
-          >
-            Remove
-          </button>
-        </td>
-      </tr>
-    ));
+    let experience;
+    if (this.props.experience.length < 1) {
+      experience = (
+        <tr>
+          <td>You don't have any experience :(</td>
+        </tr>
+      );
+    } else {
+      experience = this.props.experience.map(exp => (
+        <tr className="data-row" key={exp._id}>
+          <td className="institution">{exp.company}</td>
+          <td className="title">{exp.title}</td>
+          <td className="dates">
+            {dateFormat(exp.from)} -{" "}
+            {exp.to === null ? "Current" : dateFormat(exp.to)}
+          </td>
+          <td className="delete">
+            <button
+              onClick={() => this.deleteExpHandler(exp._id)}
+              className="btn btn-alert"
+            >
+              Remove
+            </button>
+          </td>
+        </tr>
+      ));
+    }
     return (
       <div>
-        <h4>Experience Credentials</h4>
+        <h4 className="section-title">Experience Credentials</h4>
         <table>
           <thead>
             <tr className="data-heading">
@@ -47,11 +56,9 @@ class Experience extends Component {
     );
   }
 }
-
 Experience.propTypes = {
   deleteExperience: propTypes.func.isRequired
 };
-
 export default connect(
   null,
   { deleteExperience }

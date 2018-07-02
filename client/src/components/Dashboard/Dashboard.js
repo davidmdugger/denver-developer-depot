@@ -8,6 +8,7 @@ import { getCurrentProfile, deleteAccount } from "../../actions/profileActions";
 import Spinner from "../common/Spinner";
 import ProfileAdditions from "./ProfileAdditions/ProfileAdditions";
 import Experience from "./Experience";
+import Education from "./Education";
 
 import "./Dashboard.css";
 
@@ -37,6 +38,7 @@ class Dashboard extends Component {
             </h5>
             <ProfileAdditions />
             <Experience experience={profile.experience} />
+            <Education education={profile.education} />
           </React.Fragment>
         );
       } else {
@@ -58,6 +60,15 @@ class Dashboard extends Component {
         <div className="dashboard-content">
           <h1 className="dashboard-title">Dashboard</h1>
           {dashboardContent}
+        </div>
+        <div className="remove-profile">
+          <p>
+            If you no longer wish to participate in connecting with developers,
+            you can click the button below.
+          </p>
+          <p>
+            Warning: this will delete your profile and your account permanently.{" "}
+          </p>
           <button onClick={this.deleteAccountHandler} className="btn btn-alert">
             Delete Account Forever
           </button>

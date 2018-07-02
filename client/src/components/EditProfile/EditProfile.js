@@ -39,7 +39,7 @@ class EditProfile extends Component {
     if (nextProps.profile.profile) {
       const profile = nextProps.profile.profile;
       // Turn skills array into CSV
-      const skillsCSV = profile.skills.join(",");
+      const skillsCSV = profile.skills.join();
       // if profile field doesn't exist, make value an empty string
       profile.company = !isEmpty(profile.company) ? profile.company : "";
       profile.website = !isEmpty(profile.website) ? profile.website : "";
@@ -236,7 +236,9 @@ class EditProfile extends Component {
             info="Short description concerning what you want other developers to know about you"
           />
 
-          <div
+          <button
+            type="button"
+            className="show-social-inputs"
             onClick={() => {
               this.setState(prevState => ({
                 displaySocialInputs: !prevState.displaySocialInputs
@@ -244,10 +246,10 @@ class EditProfile extends Component {
             }}
           >
             Add Social Network Links
-          </div>
+          </button>
           {socialInputs}
 
-          <input type="submit" value="Submit Your Profile" />
+          <input type="submit" value="Update" />
         </form>
       </div>
     );

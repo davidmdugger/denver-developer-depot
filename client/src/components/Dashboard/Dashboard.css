@@ -1,12 +1,22 @@
 .dashboard {
-  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: auto;
+  width: 80%;
+  max-width: 800px;
 }
 
 .dashboard-content {
-  width: 80%;
-  max-width: 800px;
-  margin: auto;
+  position: relative;
+  z-index: 100;
+  width: 100%;
   padding-left: 20px;
+}
+
+.dashboard-content .section-title {
+  margin-top: 75px;
 }
 
 .btn-alert {
@@ -35,14 +45,19 @@
   display: flex;
 }
 
+.dashboard-content table tr td {
+  font-size: 0.8em;
+}
+
 .dashboard-content table th {
   padding: 5px 0;
   border-top: 1px solid #343434;
   border-bottom: 1px solid #ccc;
+  text-align: center;
 }
 
-.dashboard-content table tr .company,
-.dashboard-content table tr .heading-company {
+.dashboard-content table tr .institution,
+.dashboard-content table tr .heading-institution {
   flex: 1;
 }
 
@@ -63,10 +78,19 @@
   text-align: center;
 }
 
-.dashboard-content table tr .btn {
-  font-size: 0.7em;
-}
-
 .dashboard-content table tr:nth-child(2) {
   background-color: #ddd;
+}
+
+.dashboard .remove-profile {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  border: 1px solid black;
+  padding: 10px;
+  text-align: justify;
+}
+
+.dashboard .remove-profile button {
+  margin-top: 20px;
 }

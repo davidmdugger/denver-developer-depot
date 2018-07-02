@@ -1,0 +1,23 @@
+.profile-container {
+  border: 1px solid black;
+  width: 95%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.profile-container .profile-header {
+  background-color: #ccc;
+  border: 1px solid blue;
+}
+
+.profile-container .profile-about {
+  border: 1px solid green;
+}
+
+.profile-container .profile-creds {
+  border: 1px solid yellow;
+}
+
+.profile-container .profile-github {
+  border: 1px solid pink;
+}

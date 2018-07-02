@@ -79,3 +79,22 @@ form .input-social i {
 form .input-social i {
   color: #fff;
 }
+
+form .show-social-inputs {
+  font-size: 0.75em;
+  width: 200px;
+  padding: 10px;
+  cursor: pointer;
+  margin: 40px 0 10px;
+  border: 1px solid #3498db;
+  background-color: #3498db;
+
+  color: #fff;
+
+  transition: all linear 200ms;
+}
+
+form .show-social-inputs:hover {
+  color: #3498db;
+  background-color: #fff;
+}
