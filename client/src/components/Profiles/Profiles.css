@@ -14,17 +14,22 @@
   margin: 10px auto;
   width: 90%;
   min-height: 150px;
-  background-color: #eee;
+  background-color: #565656;
+  color: #c5edfd;
+  border-radius: 3px;
   overflow: scroll;
   padding: 10px 5px;
   font-size: 0.8em;
 }
 
 .user-profile button {
-  background-color: #545454;
+  background-color: #c5edfd;
   border: none;
-  color: #fff;
+  color: #565656;
   padding: 4px;
+  margin-top: 10px;
+  font-size: 1em;
+  border-radius: 2px;
 }
 
 .user-profile img {
@@ -45,9 +50,14 @@
   display: none;
 }
 
+.user-profile .user-skills ul {
+  margin-top: 8px;
+}
+
 .user-profile .user-skills ul li {
   list-style: none;
-  background-color: #fff;
+  background-color: #c5edfd;
+  color: #565656;
   margin-bottom: 2px;
   padding: 5px;
 }

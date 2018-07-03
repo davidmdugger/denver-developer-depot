@@ -89,8 +89,22 @@
   border: 1px solid black;
   padding: 10px;
   text-align: justify;
+  font-size: 0.8em;
+}
+
+.dashboard .remove-profile .warning {
+  color: #ff0000;
+  margin-top: 0;
+  transform: scaleY(0);
+  transition: linear 200ms;
 }
 
 .dashboard .remove-profile button {
+  margin-top: 20px;
+}
+
+.dashboard .remove-profile:hover > .warning {
+  transform: scaleY(1);
+  padding: 8px;
   margin-top: 20px;
 }

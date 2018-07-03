@@ -1,5 +1,6 @@
 .post-feed {
   width: 90%;
+  max-width: 850px;
   margin: 40px auto;
 }
 

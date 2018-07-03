@@ -24,7 +24,7 @@ class Posts extends Component {
 
     return (
       <div>
-        <h1>Posts</h1>
+        <h2>Conversations with fellow devs</h2>
         <PostForm />
         {postContent}
       </div>

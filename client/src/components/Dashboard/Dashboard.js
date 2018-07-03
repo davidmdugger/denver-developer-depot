@@ -63,11 +63,12 @@ class Dashboard extends Component {
         </div>
         <div className="remove-profile">
           <p>
-            If you no longer wish to participate in connecting with developers,
-            you can click the button below.
+            If you no longer wish to connect with developers, you can remove
+            your account and all of your data.
           </p>
-          <p>
-            Warning: this will delete your profile and your account permanently.{" "}
+          <p className="warning">
+            Warning: Deleting your profile will permanently remove your entire
+            account from this site. This action cannot be undone.{" "}
           </p>
           <button onClick={this.deleteAccountHandler} className="btn btn-alert">
             Delete Account Forever
