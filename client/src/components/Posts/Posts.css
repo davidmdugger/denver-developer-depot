@@ -1,0 +1,41 @@
+.post-feed {
+  width: 90%;
+  margin: 40px auto;
+}
+
+.post-item {
+  display: flex;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.post-item .user {
+  padding: 20px;
+}
+
+.post-item .user img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.post-item .user p {
+  text-align: center;
+  font-size: 0.75em;
+}
+
+.post-item .comment {
+  padding: 20px 5px;
+  font-size: 0.9em;
+}
+
+.post-item .comment .rate {
+  margin-top: 8px;
+}
+
+.post-item .comment .rate button {
+  padding: 8px;
+  border: 1px solid #565656;
+  margin-right: 2px;
+  cursor: pointer;
+}

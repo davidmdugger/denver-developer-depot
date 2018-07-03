@@ -33,6 +33,9 @@ class Navbar extends Component {
         <Link to="/dashboard">
           <li>Dashboard</li>
         </Link>
+        <Link to="/feed">
+          <li>Post Feed</li>
+        </Link>
         <a onClick={this.logoutUserHandler}>
           <li className="user-nav">
             <img

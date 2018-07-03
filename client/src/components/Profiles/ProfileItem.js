@@ -12,7 +12,7 @@ class ProfileItem extends Component {
         </div>
 
         <div className="user-details">
-          <h4>{profile.user}</h4>
+          <h4>{profile.handle}</h4>
           <p>{profile.status}</p>
           <p>{profile.location}</p>
           <Link to={`/profile/${profile.handle}`}>
