@@ -40,3 +40,8 @@
   margin-right: 2px;
   cursor: pointer;
 }
+
+.post-item .comment .like {
+  background-color: #00b763;
+  color: #fff;
+}
