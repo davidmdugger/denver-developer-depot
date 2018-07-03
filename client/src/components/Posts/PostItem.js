@@ -43,9 +43,11 @@ class PostItem extends Component {
     let likeStyle;
     const postLikes = post.likes.map(like => like.user);
     const likesLength = postLikes.length;
+    // if user id is not in postLikes set style to nothing
     if (postLikes.indexOf(auth.user.id) === -1) {
       likeStyle = "";
     } else {
+      // otherwise add like className
       likeStyle = "like ";
     }
 
