@@ -1,3 +1,26 @@
+.single-post .post-item {
+  width: 90%;
+  margin: 20px auto;
+  font-size: 0.8em;
+}
+
+.single-post .post-item .user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.single-post .post-item .user img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 8px;
+}
+
+.comments-container h3 {
+  text-align: center;
+  margin-top: 50px;
+}
+
 .comments-display {
   width: 90%;
   max-width: 800px;
