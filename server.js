@@ -5,7 +5,7 @@ const express = require("express"),
 
 const path = require("path");
 
-const port = 8000 || process.env.PORT;
+const port = process.env.PORT || 8000;
 
 const users = require("./routes/api/users"),
   profile = require("./routes/api/profile"),
