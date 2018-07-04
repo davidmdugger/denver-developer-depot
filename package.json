@@ -2,6 +2,7 @@
   "name": "devconnector",
   "version": "1.0.0",
   "engines": {
+    "npm": "6.0.1",
     "node": "8.9.1"
   },
   "description": "Social network for developers",
