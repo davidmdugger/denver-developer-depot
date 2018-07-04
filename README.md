@@ -1,12 +1,16 @@
-Denver Devoloper Depot (DDD) is a web app to connect Denver's Developers with each other to share their experience, learn new skills, or just have conversations about technology.
+Denver Devoloper Depot (DDD) is a social networking web app to connect Denver's Developers.
 
-DDD is full stack application using node.js, Express, and mongoDB on the backend, and React on the the frontend.
+It was built from scratch using node.js, Express, mongoDB, and React with Redux for state management.
+
+Version one is complete and can be viewed at: https://lovely-carlsbad-caverns-38357.herokuapp.com/
+
+Please note, that the server will need to be rebooted when you first access the app. Thus, it may take up to 60 seconds to load.
 
 This code base uses the prettier extension for uniform code.
 
-# Backend Dependencies
+# H2 Backend Dependencies
 
-The server runs on port 8000.
+The server runs on port 8000 if you clone the project.
 
 This project uses Babel to transpile ES6 to ES5.
 
@@ -24,28 +28,29 @@ bcryptjs is used for password encryption and decryption.
 
 Validator is used for server side validation
 
-# Client Dependencies
+# H2 Client Dependencies
 
-The client runs on port 3000.
+The client runs on port 3000 if you clone the project.
 
-This project uses React for frontend rendering.
+React is used for frontend rendering.
 
-Redux is used to manage global state.
+Redux is used to manage app state.
 
 Axios is used for AJAX requests, and common header injection.
 
 jwt-decode is used to decode the JSON Web Token on the client to extract the user details.
 
-# Get it running
+# H2 Get it running
 
-Feel free to clone the project. If you do clone the project and want to use mongoDB, you will need to create a config folder and keys file for your database URI and the secret key. For example:
+Feel free to clone, or download, the project. If you do clone the project and want to use mongoDB, you will need to create a config folder and keys file for your database URI and the secret key. For example:
 
 config/keys.js
 
-module.exports = {
+```module.exports = {
 mongoURI: YOUR_DB_URI,
 secretOrKey: YOUR_SECRET
 };
+```
 
 Your connection to the server and db are connected via this line in the server.js file:
 
