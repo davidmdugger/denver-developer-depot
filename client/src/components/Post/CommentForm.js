@@ -38,7 +38,6 @@ class CommentForm extends Component {
 
   render() {
     const { errors } = this.state;
-    console.log(this.props.auth);
     return (
       <form onSubmit={this.onSubmit}>
         <TextAreaFieldGroup
