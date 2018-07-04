@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 class ProfileItem extends Component {
   render() {
     const { profile } = this.props;
-    console.log(profile);
     return (
       <div className="user-profile">
         <div className="user-image">

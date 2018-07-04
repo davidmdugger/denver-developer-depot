@@ -8,6 +8,7 @@ import isEmpty from "../../validation/is-empty";
 
 import PostItem from "../Posts/PostItem";
 import CommentForm from "./CommentForm";
+import CommentFeed from "./CommentFeed";
 
 import "./Post.css";
 
@@ -26,7 +27,9 @@ class Post extends Component {
       postContent = (
         <React.Fragment>
           <PostItem post={post} showActions={false} />
+
           <CommentForm postId={post._id} />
+          <CommentFeed postId={post._id} comments={post.comments} />
         </React.Fragment>
       );
     }

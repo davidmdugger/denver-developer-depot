@@ -38,6 +38,7 @@ class CommentForm extends Component {
 
   render() {
     const { errors } = this.state;
+    console.log(this.props.auth);
     return (
       <form onSubmit={this.onSubmit}>
         <TextAreaFieldGroup
@@ -54,15 +55,15 @@ class CommentForm extends Component {
 }
 
 CommentForm.propTypes = {
-  addComment: propTypes.func.isRequired,
+  addPost: propTypes.func.isRequired,
   auth: propTypes.object.isRequired,
   postId: propTypes.string.isRequired,
   errors: propTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({
-  errors: state.errors,
-  auth: state.auth
+  auth: state.auth,
+  errors: state.errors
 });
 
 export default connect(

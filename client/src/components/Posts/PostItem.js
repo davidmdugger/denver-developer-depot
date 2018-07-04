@@ -40,7 +40,7 @@ class PostItem extends Component {
     return (
       <div className="post-item">
         <div className="user">
-          <img src={post.avatar} alt="user" />
+          <img src="http://via.placeholder.com/100x100" alt="user" />
           <p>{post.name}</p>
         </div>
         <div className="comment">
