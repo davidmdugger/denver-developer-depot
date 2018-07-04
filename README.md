@@ -8,7 +8,7 @@ Please note, that the server will need to be rebooted when you first access the 
 
 This code base uses the prettier extension for uniform code.
 
-# H2 Backend Dependencies
+# Backend Dependencies
 
 The server runs on port 8000 if you clone the project.
 
@@ -28,7 +28,7 @@ bcryptjs is used for password encryption and decryption.
 
 Validator is used for server side validation
 
-# H2 Client Dependencies
+# Client Dependencies
 
 The client runs on port 3000 if you clone the project.
 
@@ -40,7 +40,7 @@ Axios is used for AJAX requests, and common header injection.
 
 jwt-decode is used to decode the JSON Web Token on the client to extract the user details.
 
-# H2 Get it running
+# Get it running
 
 Feel free to clone, or download, the project. If you do clone the project and want to use mongoDB, you will need to create a config folder and keys file for your database URI and the secret key. For example:
 
