@@ -13,15 +13,17 @@ class CommentItem extends Component {
     const deleteButton =
       comment.user === auth.user.id ? (
         <button
+          className="btn btn-alert btn-small"
           onClick={() => this.onDeleteClick(postId, comment._id)}
           type="button"
         >
           Delete
         </button>
       ) : null;
+
     return (
       <div className="comment" key={comment._id}>
-        <h3>{comment.name}</h3>
+        <h3 className="comment-user-name">{comment.name}</h3>
         <p>{comment.text}</p>
         {deleteButton}
       </div>

@@ -3,3 +3,19 @@
   max-width: 800px;
   margin: 30px auto;
 }
+
+.comments-display .comment {
+  margin-bottom: 15px;
+  padding: 5px;
+  font-size: 0.8em;
+  border: 1px solid #d6d6d6;
+}
+
+.comments-display .comment .comment-user-name {
+  color: #c5edfd;
+}
+
+.comments-display .comment .btn-small {
+  font-size: 0.75em;
+  padding: 3px;
+}
