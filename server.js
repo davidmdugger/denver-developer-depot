@@ -1,9 +1,10 @@
 const express = require("express"),
   app = express(),
-  path = require("path"),
   mongoose = require("mongoose"),
   bodyParser = require("body-parser"),
   passport = require("passport");
+
+const path = require("path");
 
 const port = 8000 || process.env.PORT;
 
