@@ -12,7 +12,15 @@
 }
 
 .comments-display .comment .comment-user-name {
+  display: inline-block;
   color: #c5edfd;
+  background-color: #565656;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+.comments-display .comment p {
+  margin: 10px;
 }
 
 .comments-display .comment .btn-small {

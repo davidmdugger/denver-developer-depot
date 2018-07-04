@@ -39,7 +39,7 @@ class CommentForm extends Component {
   render() {
     const { errors } = this.state;
     return (
-      <form onSubmit={this.onSubmit}>
+      <form id="comment-form" onSubmit={this.onSubmit}>
         <TextAreaFieldGroup
           placeholder="Reply to post..."
           name="text"
