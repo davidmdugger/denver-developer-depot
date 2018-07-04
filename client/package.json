@@ -2,6 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "engines": {
+    "npm": "6.0.1",
     "node": "8.9.1"
   },
   "private": true,
