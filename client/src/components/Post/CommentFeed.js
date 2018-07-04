@@ -10,7 +10,7 @@ const CommentFeed = props => {
 
   return (
     <div className="comments-container">
-      <h3>Comments</h3>
+      <h3 className="comments-feed-title">Comments</h3>
       <div className="comments-display">{commentsDisplay}</div>
     </div>
   );

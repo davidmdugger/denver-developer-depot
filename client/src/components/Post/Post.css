@@ -16,7 +16,7 @@
   margin-bottom: 8px;
 }
 
-.comments-container h3 {
+.comments-container .comments-feed-title {
   text-align: center;
   margin-top: 50px;
 }
