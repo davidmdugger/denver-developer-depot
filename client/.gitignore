@@ -9,9 +9,6 @@
 # production
 /build
 
-# third party API keys
-/src/config
-
 # misc
 .DS_Store
 .env.local
