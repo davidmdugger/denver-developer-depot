@@ -17,6 +17,7 @@ import AddEducation from "../Credentials/AddEducation/AddEducation";
 import Profiles from "../Profiles/Profiles";
 import Profile from "../Profile/Profile";
 import Posts from "../Posts/Posts";
+import Post from "../Post/Post";
 
 import PrivateRoute from "../common/PrivateRoute";
 
@@ -56,6 +57,9 @@ const Layout = props => {
         <Route exact path="/profile/:handle" component={Profile} />
         <Switch>
           <PrivateRoute exact path="/feed" component={Posts} />
+        </Switch>
+        <Switch>
+          <Route exact path="/post/:id" component={Post} />
         </Switch>
         <Footer />
       </div>

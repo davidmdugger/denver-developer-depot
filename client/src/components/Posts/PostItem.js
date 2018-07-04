@@ -22,22 +22,8 @@ class PostItem extends Component {
     this.setState({ like: false });
   };
 
-  // postUserLiked = likes => {
-  //   const { auth } = this.props;
-  //   console.log(likes);
-  //   if (likes.filter(like => like.user === auth.user.id).length > 0) {
-  //     console.log("liked");
-  //     return true;
-  //   } else {
-  //     console.log("notliked");
-
-  //     return false;
-  //   }
-  // };
-
   render() {
-    const { post, auth } = this.props;
-    console.log(post);
+    const { post, auth, showActions } = this.props;
 
     // add/remove button style if user liked comment
     let likeStyle;
@@ -59,29 +45,38 @@ class PostItem extends Component {
         </div>
         <div className="comment">
           <p>{post.text}</p>
-          <div className="rate">
-            <button
-              className={likeStyle}
-              onClick={() => this.onLikeClick(post._id)}
-            >
-              <i className="fa fa-thumbs-up " />
-              <span>{likesLength}</span>
-            </button>
-            <button onClick={() => this.onUnlikeClick(post._id)}>
-              <i className="fa fa-thumbs-down" />
-            </button>
-            <Link to={`/post/${post._id}`}>
-              <button>Comments</button>
-            </Link>
-            <button onClick={() => this.onDeleteClick(post._id)} type="button">
-              Delete
-            </button>
-          </div>
+          {showActions ? (
+            <div className="rate">
+              <button
+                className={likeStyle}
+                onClick={() => this.onLikeClick(post._id)}
+              >
+                <i className="fa fa-thumbs-up " />
+                <span>{likesLength}</span>
+              </button>
+              <button onClick={() => this.onUnlikeClick(post._id)}>
+                <i className="fa fa-thumbs-down" />
+              </button>
+              <Link to={`/post/${post._id}`}>
+                <button>Comments</button>
+              </Link>
+              <button
+                onClick={() => this.onDeleteClick(post._id)}
+                type="button"
+              >
+                Delete
+              </button>
+            </div>
+          ) : null}
         </div>
       </div>
     );
   }
 }
+
+PostItem.defaultProps = {
+  showActions: true
+};
 
 PostItem.propTypes = {
   post: propTypes.object.isRequired,
