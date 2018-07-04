@@ -1,5 +1,4 @@
 const express = require("express"),
-  app = express(),
   mongoose = require("mongoose"),
   bodyParser = require("body-parser"),
   passport = require("passport");
@@ -11,6 +10,8 @@ const port = 8000 || process.env.PORT;
 const users = require("./routes/api/users"),
   profile = require("./routes/api/profile"),
   posts = require("./routes/api/posts");
+
+const app = express();
 
 // body-parser middleware
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -24,6 +25,12 @@ mongoose
   .connect(db)
   .then(() => console.log("MongoDB is connected"))
   .catch(err => console.log(err));
+
+// Passport middleware
+app.use(passport.initialize());
+
+// Passport Config
+require("./config/passport")(passport);
 
 // use the routes imported
 app.use("/api/users", users);
@@ -40,9 +47,4 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-// Passport middleware
-app.use(passport.initialize());
-
-// Passport Config
-require("./config/passport")(passport);
 app.listen(port, () => console.log(`Server is running on port ${port}`));
