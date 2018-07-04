@@ -24,7 +24,7 @@ class Experience extends Component {
           <td className="institution">{exp.company}</td>
           <td className="title">{exp.title}</td>
           <td className="dates">
-            {dateFormat(exp.from)} -{" "}
+            {exp.from === null ? "" : dateFormat(exp.from)} -{" "}
             {exp.to === null ? "Current" : dateFormat(exp.to)}
           </td>
           <td className="delete">

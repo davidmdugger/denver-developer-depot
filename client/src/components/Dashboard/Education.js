@@ -15,7 +15,8 @@ class Education extends Component {
         <td className="institution">{edu.school}</td>
         <td className="title">{edu.degree}</td>
         <td className="dates">
-          {dateFormat(edu.to)} - {dateFormat(edu.from)}
+          {edu.from === null ? "" : dateFormat(edu.from)} -{" "}
+          {edu.to === null ? "Current" : dateFormat(edu.to)}
         </td>
         <td className="delete">
           <button
