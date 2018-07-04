@@ -36,10 +36,14 @@
 }
 
 .post-item .comment .rate button {
-  padding: 8px;
+  padding: 5px;
   border: 1px solid #565656;
   margin-right: 2px;
   cursor: pointer;
+}
+
+.post-item .comment .rate button .fa {
+  margin-right: 2px;
 }
 
 .post-item .comment .like {
