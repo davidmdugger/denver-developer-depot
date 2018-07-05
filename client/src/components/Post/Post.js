@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
 import propTypes from "prop-types";
 import Spinner from "../common/Spinner";
 import { getPost } from "../../actions/postActions";
@@ -18,7 +17,7 @@ class Post extends Component {
   }
 
   render() {
-    const { post, loading } = this.props.post;
+    const { post } = this.props.post;
     let postContent;
 
     if (isEmpty(post)) {
