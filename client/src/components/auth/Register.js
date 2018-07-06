@@ -55,7 +55,7 @@ class Register extends Component {
   render() {
     const { errors } = this.state;
     return (
-      <form onSubmit={this.onSubmit}>
+      <form className="scale-up" onSubmit={this.onSubmit}>
         <div className="form-title">
           <h1>Sign Up</h1>
           <h4>Create your account</h4>
@@ -97,7 +97,11 @@ class Register extends Component {
           error={errors.password2}
         />
 
-        <input type="submit" className="btn" value="Sign Me Up!" />
+        <input
+          type="submit"
+          className="btn rotate-scale-up"
+          value="Sign Me Up!"
+        />
       </form>
     );
   }

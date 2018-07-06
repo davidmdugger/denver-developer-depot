@@ -5,7 +5,7 @@ class ProfileItem extends Component {
   render() {
     const { profile } = this.props;
     return (
-      <div className="user-profile">
+      <div className="user-profile scale-up">
         <div className="user-image">
           <img src="http://via.placeholder.com/200x200" alt="user" />
         </div>

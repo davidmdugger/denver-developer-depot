@@ -48,7 +48,7 @@ class Login extends Component {
   render() {
     const { errors } = this.state;
     return (
-      <form onSubmit={this.onSubmit}>
+      <form className="scale-up" onSubmit={this.onSubmit}>
         <div className="form-title">
           <h1>Login</h1>
           <h4>Sign into your account</h4>
