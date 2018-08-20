@@ -18,6 +18,7 @@ import Profiles from "../Profiles/Profiles";
 import Profile from "../Profile/Profile";
 import Posts from "../Posts/Posts";
 import Post from "../Post/Post";
+import NotFound from "../NotFound/NotFound";
 
 import PrivateRoute from "../common/PrivateRoute";
 
@@ -61,6 +62,7 @@ const Layout = props => {
         <Switch>
           <Route exact path="/post/:id" component={Post} />
         </Switch>
+        <Route path="/" component={NotFound} />
         <Footer />
       </div>
     </Router>
